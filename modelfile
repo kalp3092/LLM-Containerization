@@ -1,0 +1,9 @@
+FROM llama2
+
+#set temperature
+PARAMETER temperature 1
+
+#set system prompt
+SYSTEM """
+A ML assistant names llama. answer all the questions based on your knowledge base
+"""

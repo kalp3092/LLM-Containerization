@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: llm-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: llm-app
+  template:
+    metadata:
+      labels:
+        app: llm-app
+    spec:
+      containers:
+      - name: llm-app
+        image: siddh10/llm-container:llm-image
+        ports:
+        - containerPort: 8501
